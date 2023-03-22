@@ -4,11 +4,11 @@ let config;
 
 if (process.env.REACT_APP_NODE_ENV === "production") {
   config = {
-    baseURL: "http://localhost:5000/",
+    baseURL: "https://colorful-hospital-gown-newt.cyclic.app/",
   };
 } else {
   config = {
-    baseURL: "http://localhost:5000/",
+    baseURL: "https://colorful-hospital-gown-newt.cyclic.app/",
   };
 }
 
