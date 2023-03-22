@@ -1,7 +1,6 @@
 import { DeleteOutlined } from "@ant-design/icons";
 import { message } from "antd";
 import { Button, Divider, Table } from "antd";
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { deleteCard } from "../api/cards";
