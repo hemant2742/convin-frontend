@@ -52,7 +52,9 @@ const CardDiv = ({ data }) => {
               deleteCard(data.id)
                 .then(() => message.success("Card deleted successfully", [2]))
                 .catch(() =>
-                  message.error("Error occured during deletion", [2])
+                 console.log("err")
+                ).finally(
+                   message.info("Cards update👍please reload",[1])
                 );
             }}
           />,

@@ -1,6 +1,6 @@
 let config;
 
-// console.log("Environment =>", process.env.REACT_APP_NODE_ENV);
+console.log("Environment =>", process.env.REACT_APP_NODE_ENV);
 
 if (process.env.REACT_APP_NODE_ENV === "production") {
   config = {

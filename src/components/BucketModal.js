@@ -24,7 +24,10 @@ const BucketModal = () => {
           .then((values) => {
             createBucket(values)
               .then(() => message.success("Bucket created successfully", 3))
-              .catch(() => message.error("Bucket creation error", 3));
+              .catch(() => message.error("Bucket creation error", 3))
+              .finally(
+                message.info("Buckets update👍")
+             );
             dispatch(setBucketModalVisible(false));
             form.resetFields();
           })
