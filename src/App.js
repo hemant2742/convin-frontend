@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Tabs } from "antd";
+import { useDispatch, useSelector } from "react-redux";
+import styled from "styled-components";
+import BucketsTab from "./components/BucketsTab";
+import CardsTab from "./components/CardsTab";
+import HistoryTab from "./components/HistoryTab";
+import { setCurrentTab } from "./reducers/historySlice";
 
-function App() {
+const { TabPane } = Tabs;
+
+const StyledTabs = styled(Tabs)`
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem 4rem;
+  .ant-tabs-tab-btn {
+    font-size: 2rem;
+  }
+`;
+
+const App = () => {
+  const dispatch = useDispatch();
+  const tabKey = useSelector((state) => state.history.tabKey);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StyledTabs
+      defaultActiveKey={tabKey}
+      centered
+      onChange={(key) => {
+        dispatch(setCurrentTab(key));
+      }}
+    >
+      <TabPane tab="Buckets" key="1">
+        <BucketsTab />
+      </TabPane>
+      <TabPane tab="Cards" key="2">
+        <CardsTab />
+      </TabPane>
+      <TabPane tab="History" key="3">
+        <HistoryTab />
+      </TabPane>
+    </StyledTabs>
   );
-}
-
+};
 export default App;

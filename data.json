@@ -1,0 +1,39 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "buckets": [
+    {
+      "name": "test",
+      "id": 1
+    }
+  ],
+  "cards": [
+    {
+      "name": "wdefrgth",
+      "url": "www.kffiogjfg.com",
+      "bucketId": 1,
+      "id": 2
+    },
+    {
+      "name": "dfg",
+      "url": "http://localhost:5000/posts",
+      "bucketId": 1,
+      "id": 3
+    }
+  ]
+}
